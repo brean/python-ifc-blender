@@ -1,0 +1,41 @@
+[
+  {
+    "name": "load_ifc",
+    "save": "out/AC20-FZK-Haus.json",
+    "ifc_file": "buildings/AC20-FZK-Haus.ifc"
+  },
+  {
+    "name": "mesh_remove",
+    "mesh_name": "Cube",
+    "description": "remove starting Cube"
+  },
+  {
+    "name": "import",
+    "description": "import ifc to blender",
+    "ifc_file": "buildings/AC20-FZK-Haus.ifc"
+  },
+  {
+    "name": "remove_site",
+    "description": "remove base plate"
+  },
+  {
+    "name": "create_group",
+    "ifc_type": "storey",
+    "description": "create groups for each single storey"
+  },
+  {
+    "name": "add_group",
+    "ifc_type_group": "storey",
+    "ifc_children": "spaces"
+  },
+  {
+    "name": "save",
+    "description": "save blend file",
+    "filepath": "out/AC20-FZK-Haus"
+  },
+  {
+    "name": "export",
+    "filepath": "out/BUW_HC-Gebaeude",
+    "filetype": ["obj", "fbx"]
+  }
+]
