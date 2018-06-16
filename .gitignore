@@ -1,3 +1,13 @@
+out/*.fbx
+out/*.blend
+out/*.blend1
+out/*.obj
+out/*.json
+out/*.mtl
+buildings/*.ifc
+buildings/*.blend
+buildings/*.blend1
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

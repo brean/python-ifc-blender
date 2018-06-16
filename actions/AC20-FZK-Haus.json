@@ -24,9 +24,17 @@
     "description": "create groups for each single storey"
   },
   {
+    "name": "create_group",
+    "ifc_type": "space",
+    "description": "create groups for each single storey"
+  },
+  {
     "name": "add_group",
     "ifc_type_group": "storey",
     "ifc_children": "spaces"
+  },
+  {
+    "name": "group_by_elevation"
   },
   {
     "name": "save",
@@ -35,7 +43,15 @@
   },
   {
     "name": "export",
-    "filepath": "out/BUW_HC-Gebaeude",
+    "filepath": "out/AC20-FZK-Haus",
     "filetype": ["obj", "fbx"]
+  },
+  {
+    "name": "group_split",
+    "description": "split into multiple groups",
+    "ifc_type": "storey",
+    "outpath": "out",
+    "blend_file": "out/AC20-FZK-Haus",
+    "export": ["obj", "fbx"]
   }
 ]

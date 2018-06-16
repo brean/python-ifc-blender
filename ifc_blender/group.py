@@ -73,6 +73,8 @@ def _by_elevation(building, prefix=''):
     for obj in bpy.data.objects:
         num_groups = sum([obj.name in g.objects for g in bpy.data.groups])
         if num_groups == 0:
+            if obj.type != 'MESH':
+                continue
             if not obj.data.vertices:
                 continue
             vcos = [ obj.matrix_world * v.co for v in obj.data.vertices ]
@@ -80,7 +82,7 @@ def _by_elevation(building, prefix=''):
 
             x,y,z  = [ [ v[i] for v in vcos ] for i in range(3) ]
             center = [ findCenter(axis) for axis in [x,y,z] ]
-        
+
             z = center[2]
             grp_name = [n for n, e in elevations.items() if e[0] <= z < e[1]]
             if grp_name:
@@ -167,7 +169,7 @@ def add(project, ifc_type_group, prefix='', ifc_children=None, **kwargs):
 split into multiple .blend-files based on blender groups and ifc_type
 """
 def split(project, ifc_type, outpath, blend_file, export=None, **kwargs):
-    
+
     elements = ifc_helper.elements_by_type(project, ifc_type)
     for elem in elements:
         i = 0
