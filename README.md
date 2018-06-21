@@ -9,9 +9,11 @@ A workflow could look like this:
 1. If you like to show specific data or find single elements from the IFC in your app you can simply load the JSON file and map the names of the objects in the fbx/obj with the data in the JSON.
 
 You can also combine this with other blender functionality like to animate single IFC objects (like storeys).
+
 ![Storey animation](docs/animations/storey_animation.gif?raw=true)
 
-Or use it in three.js to figure out which room an element is placed at. (In this web application for example we use the IfcSpace-information from the JSON file to detect in which room our air condition is dragged - see room number in the up-right corner when the object is moved)
+Or use it in three.js to figure out which room an element is placed at. (In this web application for example we use the IfcSpace-information from the JSON file to detect in which room our air condition is dragged - see room number in the up-right corner when the object is moved).
+
 ![Object movement, space detection](docs/animations/room_detect.gif?raw=true)
 
 # Installation
