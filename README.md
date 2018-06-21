@@ -4,15 +4,15 @@ import and manipulate an IFC in Blender based on IFCOpenShell
 A workflow could look like this:
 1. You create some building in Revit (or get it from an architect).
 1. You export your Model to IFC
-1. You use this script to import the model to Blender and do something with it (e.g. split by level to and export to FBX, so you have multiple files for each storey). Also a small JSON-file will be generated storing infromation from the IFC (like storeys, rooms, ... - using [Python-IFC-Model](https://github.com/brean/python-ifc-model).
-1. You use the FBX in a 3D-Engine like Unity to display the building. You can then add some logic to animate the level.
-1. If you like to show specific data or find single elements from the IFC in your app you can simply load the JSON file and map the names of the objects in the fbx/obj with the data in the JSON.
+1. You use IFC-Blender to import the model to Blender and do something with it (e.g. split by storey and export to FBX, so you have multiple files for each storey). Also a small JSON-file will be generated storing infromation from the IFC (like storeys, rooms, ... - using [Python-IFC-Model](https://github.com/brean/python-ifc-model).
+1. You use the FBX in a 3D-Engine like Unity to display the building. You can then add some logic to animate the building or just show it in VR/AR.
+1. If you like to show specific data from the IFC or find single elements to highlight in your app you can simply load the JSON file and map the names of the objects in the fbx/obj with the data from the JSON-file.
 
-You can also combine this with other blender functionality like to animate single IFC objects (like storeys).
+You can also combine this with other blender functionality, e.g. to animate single IFC types (like storeys):
 
 ![Storey animation](docs/animations/storey_animation.gif?raw=true)
 
-Or use it in three.js to figure out which room an element is placed at. (In this web application for example we use the IfcSpace-information from the JSON file to detect in which room our air condition is dragged - see room number in the up-right corner when the object is moved).
+Or use it in the browser, for example using [https://threejs.org/](three.js) to figure out which room an element is placed at. (In this web application for example we use the IfcSpace information from the JSON file to detect in which room our air condition is dragged - see room number in the up-right corner when the object is moved).
 
 ![Object movement, space detection](docs/animations/room_detect.gif?raw=true)
 
