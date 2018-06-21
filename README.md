@@ -6,17 +6,19 @@ A workflow could look like this:
 1. You export your Model to IFC
 1. You use this script to import the model to Blender and do something with it (e.g. split by level to and export to FBX, so you have multiple files for each storey). Also a small JSON-file will be generated storing infromation from the IFC (like storeys, rooms, ... - using [Python-IFC-Model](https://github.com/brean/python-ifc-model).
 1. You use the FBX in a 3D-Engine like Unity to display the building. You can then add some logic to animate the level.
-1. If you like to show specific data or find single elements from the IFC in your app you can simply
+1. If you like to show specific data or find single elements from the IFC in your app you can simply load the JSON file and map the names of the objects in the fbx/obj with the data in the JSON.
+
+You can also combine this with other blender functionality like to animate single IFC objects (like storeys).
+![Storey animation](docs/animations/storey_animation.gif?raw=true)
+
+Or use it in three.js to figure out which room an element is placed at. (In this web application for example we use the IfcSpace-information from the JSON file to detect in which room our air condition is dragged - see room number in the up-right corner when the object is moved)
+![Object movement, space detection](docs/animations/room_detect.gif?raw=true)
 
 # Installation
 see [install](docs/install.md)
 
-# Export from Revit
-It is the easiest when we export the 3D-representation of spaces (space boundaries), so we can use them as objects in Blender.
-
-When you like to import your Revit model you should select "1st level" in Revit when exporting:
-
-![IFC-Export with 1st level selected](docs/images/ifc_export_revit_1st_level.png?raw=true)
+# Export from Autodesk Revit
+see [revit](docs/revit.md)
 
 # Running the example
 There is an example json-file that creates separated .blend files for all storeys, based on the ["FZK Haus" from the IFC Wiki](http://www.ifcwiki.org/index.php?title=KIT_IFC_Examples)

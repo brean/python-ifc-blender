@@ -1,4 +1,4 @@
-JSON-configuration
+# JSON-configuration
 
 |JSON|description|
 |---|---|
