@@ -12,9 +12,10 @@
 1. (optional) if you like to load the Add-on every time Blender starts click the "Save User Settings"-button.
 1. Close the "User Preferences" window and make sure the installation was successful. Under "File" -> "Import" you should see "Industry Foundation Classes (.ifc)"<br/>
    ![IFC in Blender](images/blender_start_ifc_addon.png?raw=true).
-1. Quit Blender
+1. Make sure to remove everything (cameras, lights, other meshes, ...)  before you import a building! Just press `CTRL`+`a` and `x` and confirm by clicking on `Delete X`.
 
 ### Install IfcBlender
+1. Quit Blender if it is running
 1. Download/Checkout [python-ifc-model](https://github.com/brean/python-ifc-model)
 1. Download [IfcOpenShell for python](http://www.ifcopenshell.org/python.html) for your blender version (for Blender 2.79 you can use "IfcOpenShell-python for python 3.5 64bit Windows")
 1. Extract the downloaded files and copy the folders `ifc_model` and `ifcopenshell`  to `<Blender Installation Folder>\<Blender Version>\python\lib`
