@@ -12,7 +12,7 @@
 1. (optional) if you like to load the Add-on every time Blender starts click the "Save User Settings"-button.
 1. Close the "User Preferences" window and make sure the installation was successful. Under "File" -> "Import" you should see "Industry Foundation Classes (.ifc)"<br/>
    ![IFC in Blender](images/blender_start_ifc_addon.png?raw=true).
-1. Make sure to remove everything (cameras, lights, other meshes, ...)  before you import a building! Just press `CTRL`+`a` and `x` and confirm by clicking on `Delete X`.
+1. Make sure to remove everything (cameras, lights, other meshes, ...)  before you import a building! Just press `a` in 'Object Mode' to select everything (you might need to press it twice if there is something selected) and `x` and confirm by clicking on `Delete X`.
 
 ### Install IfcBlender
 1. Quit Blender if it is running
