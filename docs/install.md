@@ -18,7 +18,7 @@
 1. Quit Blender if it is running
 1. Download/Checkout [python-ifc-model](https://github.com/brean/python-ifc-model)
 1. Download [IfcOpenShell for python](http://www.ifcopenshell.org/python.html) for your blender version (for Blender 2.79 you can use "IfcOpenShell-python for python 3.5 64bit Windows")
-1. Extract the downloaded files and copy the folders `ifc_model` and `ifcopenshell`  to `<Blender Installation Folder>\<Blender Version>\python\lib`
+1. Extract the downloaded files and copy the folders `ifc_model/ifc_model` (the sub-folder) and `ifcopenshell`  to `<Blender Installation Folder>\<Blender Version>\python\lib`
    ![Python-libs inside Blender](images/ifc_model_path.png?raw=true)
 
 (TODO: installing this as Blender Add-On from the UI would be nice...)
